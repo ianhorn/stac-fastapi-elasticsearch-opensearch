@@ -21,6 +21,7 @@ services:
       - ES_USE_SSL=false
       - ES_VERIFY_CERTS=false
       - BACKEND=elasticsearch
+      - STAC_FASTAPI_ROOT_PATH=/stac/api/v1
     ports:
       - "8080:8080"
     volumes:
@@ -55,6 +56,7 @@ services:
       - ES_VERIFY_CERTS=false
       - BACKEND=opensearch
       - STAC_FASTAPI_RATE_LIMIT=200/minute
+      - STAC_FASTAPI_ROOT_PATH=/stac/api/v1
     ports:
       - "8082:8082"
     volumes:
