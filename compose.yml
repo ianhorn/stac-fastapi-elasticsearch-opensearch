@@ -56,7 +56,8 @@ services:
       - ES_VERIFY_CERTS=false
       - BACKEND=opensearch
       - STAC_FASTAPI_RATE_LIMIT=200/minute
-      - STAC_FASTAPI_ROOT_PATH=/stac/api/v1
+      - STAC_FASTAPI_ROOT_PATH=/api/v1
+      - STAC_HOST=https://exf51glmz7.execute-api.us-west-2.amazonaws.com/stac
     ports:
       - "8082:8082"
     volumes:
